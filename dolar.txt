@@ -1,0 +1,44 @@
+% Template MATLAB code for reading numeric data from a webpage, analyzing
+% the data and storing the analyzed data in a channel.
+
+% Prior to running this MATLAB code template, assign the url for the
+% webpage to scrape to the 'url' variable. Also assign the target string to
+% search for in the web page to the 'targetString' variable.
+
+% To store the scraped data, you will need to write it to a channel other
+% than the one you are reading data from.  Assign this channel ID to the
+% 'writeChannelID' variable. Also assign the write API Key to the
+% 'writeAPIKey' variable below. You can find the write API Key in the right
+% side pane of this page as well.
+
+% TODO - Specify URL of the page to read data from
+url = 'https://openexchangerates.org/api/latest.json?app_id=c7323cee96434f54891ddeeac132da41';
+% TODO - Specify the target string to search in webpage
+a='BTC';
+b='COP';
+c='EUR';
+targetString1= a;
+targetString2= b;
+targetString3= c;
+
+% TODO - Replace the [] with channel ID to write data to:
+writeChannelID = [90866];
+% TODO - Enter the Write API Key between the '' below:
+writeAPIKey = 'XYU5PJTQYSO0ZTJL';
+
+%% Scrape the webpage %%
+data(1) = urlfilter(url, targetString1);
+data(2) = urlfilter(url, targetString2);
+data(3) = urlfilter(url, targetString3);
+data=data
+
+%% Analyze Data %%
+% Add code in this section to analyze data and store the result in the
+% analyzedData variable.
+analyzedData = data;
+
+%% Write Data %
+
+timestamp=datetime('now','TimeZone','local','Format','yyyy-MM-dd HH:mm:ss Z')
+
+thingSpeakWrite(writeChannelID, data,'WriteKey', writeAPIKey,'timestamp',timestamp,'Fields',[1,2,3]);
