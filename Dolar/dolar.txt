@@ -24,7 +24,7 @@ targetString3= c;
 % TODO - Replace the [] with channel ID to write data to:
 writeChannelID = [90866];
 % TODO - Enter the Write API Key between the '' below:
-writeAPIKey = 'XYU5PJTQYSO0ZTJL';
+writeAPIKey = 'XXXXXXXXXXXXXXX';
 
 %% Scrape the webpage %%
 data(1) = urlfilter(url, targetString1);
