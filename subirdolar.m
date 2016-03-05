@@ -9,5 +9,5 @@ dolar4 = num2str(cell2mat(dolar3))
 dolar5 = regexprep(dolar4,'[.]','')
 dolar6 = str2num(dolar5)
 dolar7 = dolar6/100
-thingSpeakWrite(91633, dolar7, 'WriteKey','NGJDGEGYNR7KYFAO');
+thingSpeakWrite(xxxxx, dolar7, 'WriteKey','xxxxxxxxxxx');
 end
