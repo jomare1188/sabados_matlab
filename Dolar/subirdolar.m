@@ -1,5 +1,6 @@
-function subirdolar(~,~)
+function subirdolar(~,~)%comentario desde github y matlab :D
 web = 'https://www.superfinanciera.gov.co/jsp/index.jsf'
+web2 =0;
 captura = getTableFromWeb_mod(web,2)
 regex = '[^$].[0-9].[0-9].[0-9]*'
 dolar = captura(2,2)
