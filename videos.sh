@@ -1,14 +1,5 @@
 #!/bin/bash
 
-touch aaa2123_ftyp.mov  
-touch aaa2123.mov
-
-touch bbb666_ftyp.mov  
-touch bbb666.mov 
-
-touch erdsfb1234_ftyp.mov
-touch erdsfb1234.mov 
-
 ls | sort -u | grep ftyp > lista_2.txt # lista ftpy
 ls | sort -u | grep -v ftyp | grep ".mov$" > lista_1.txt # lista .mov
 
