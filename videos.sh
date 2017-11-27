@@ -1,11 +1,12 @@
 #!/bin/bash
 
+
 ls | sort -u | grep ftyp > lista_2.txt # lista ftpy
 ls | sort -u | grep -v ftyp | grep ".mov$" > lista_1.txt # lista .mov
 
 
-mapfile -t lista_ftyp < /home/jorge/scripts/lista_2.txt
-mapfile -t lista_mov < /home/jorge/scripts/lista_1.txt
+mapfile -t lista_ftyp < "$(pwd)/lista_2.txt"
+mapfile -t lista_mov < "$(pwd)/lista_1.txt"
 
 echo la longitud de array es ${#lista_ftyp[@]} # o cantidad de videos finales
 
